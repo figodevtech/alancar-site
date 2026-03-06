@@ -143,7 +143,7 @@ export default async function VehicleDetailPage({
                         {vehicle.message && (
                           <Link
                             target="_blank"
-                            href={`https://web.whatsapp.com/send/?phone=5583982209260&text=${vehicle.message}`}>
+                            href={`https://wa.me/send/?phone=5583982209260&text=${vehicle.message}`}>
                             <Button
                               variant="outline"
                               className="w-full border-accent text-accent hover:bg-accent/10"

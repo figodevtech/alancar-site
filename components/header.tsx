@@ -11,7 +11,18 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white  text-primary-foreground shadow-md">
-      <div className="mx-auto flex items-center justify-between px-6 py-3.5 lg:px-10">
+      <div className="mx-auto flex items-center relative justify-center md:justify-between px-6 py-3.5 lg:px-10">
+        <button
+          className="md:hidden absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-md"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label={mobileMenuOpen ? "Fechar menu" : "Abrir menu"}
+        >
+          {mobileMenuOpen ? (
+            <X className="h-6 w-6 text-black" />
+          ) : (
+            <Menu className="h-6 w-6 text-black" />
+          )}
+        </button>
         <Link href="/" className="flex items-center gap-2">
           {/* <Car className="h-7 w-7" /> */}
           <Image
@@ -31,13 +42,13 @@ export function Header() {
             Comprar
           </Link>
           <Link
-            href="/veiculos"
+            href=""
             className="text-sm font-medium text-black/80 transition-colors hover:text-black"
           >
             Vender
           </Link>
           <Link
-            href="/veiculos"
+            href=""
             className="text-sm font-medium text-black/80 transition-colors hover:text-black"
           >
             Financiamento
@@ -70,23 +81,13 @@ export function Header() {
             <Link
               target="_blank"
               href="
-            https://web.whatsapp.com/send/?phone=5583982209260&text=Olá,%20gostaria%20de%20anunciar%20um%20veículo%20no%20seu%20site.%20
+            https://wa.me/send/?phone=5583982209260&text=Olá,%20gostaria%20de%20anunciar%20um%20veículo%20no%20seu%20site.%20
             ">Anunciar</Link>
           </Button>
         </div>
 
-        <button
-          className="md:hidden"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label={mobileMenuOpen ? "Fechar menu" : "Abrir menu"}
-        >
-          {mobileMenuOpen ? (
-            <X className="h-6 w-6" />
-          ) : (
-            <Menu className="h-6 w-6" />
-          )}
-        </button>
       </div>
+        
 
       {mobileMenuOpen && (
         <div className="border-t border-black/10 px-4 pb-4 md:hidden">
@@ -119,7 +120,11 @@ export function Header() {
                 className="w-full font-semibold"
                 asChild
               >
-                <Link href="/veiculos">Anunciar</Link>
+                 <Link
+              target="_blank"
+              href="
+            https://wa.me/send/?phone=5583982209260&text=Olá,%20gostaria%20de%20anunciar%20um%20veículo%20no%20seu%20site.%20
+            ">Anunciar</Link>
               </Button>
             </div>
           </nav>

@@ -31,7 +31,7 @@ export function HeroSearch() {
     <section className="relative mt-5 z-10 mx-auto max-w-6xl px-4 lg:px-6">
       <div className="rounded-2xl bg-card p-5 shadow-xl ring-1 ring-border/50 md:p-6">
         <h2 className="mb-4 font-mono text-lg font-bold text-card-foreground">
-          Encontre seu proximo veiculo
+          Encontre seu próximo veículo
         </h2>
         <div className="flex flex-col gap-3 md:flex-row md:items-end md:gap-4">
           <div className="flex-1">
@@ -40,7 +40,7 @@ export function HeroSearch() {
               Marca
             </label>
             <Select value={brand} onValueChange={setBrand}>
-              <SelectTrigger className="bg-secondary text-secondary-foreground">
+              <SelectTrigger className="w-full bg-secondary text-secondary-foreground">
                 <SelectValue placeholder="Todas as marcas" />
               </SelectTrigger>
               <SelectContent>
@@ -59,7 +59,7 @@ export function HeroSearch() {
               Faixa de preco
             </label>
             <Select value={priceRange} onValueChange={setPriceRange}>
-              <SelectTrigger className="bg-secondary text-secondary-foreground">
+              <SelectTrigger className="w-full bg-secondary text-secondary-foreground">
                 <SelectValue placeholder="Qualquer preco" />
               </SelectTrigger>
               <SelectContent>
@@ -77,7 +77,7 @@ export function HeroSearch() {
               Ano
             </label>
             <Select value={yearRange} onValueChange={setYearRange}>
-              <SelectTrigger className="bg-secondary text-secondary-foreground">
+              <SelectTrigger className="w-full bg-secondary text-secondary-foreground">
                 <SelectValue placeholder="Qualquer ano" />
               </SelectTrigger>
               <SelectContent>
@@ -99,23 +99,23 @@ export function HeroSearch() {
           </Button>
         </div>
 
-        <div className="mt-5 flex flex-wrap items-center gap-6 border-t border-border pt-4 text-muted-foreground">
+        <div className=" mt-5 flex flex-wrap items-center gap-6 border-t border-border pt-4 text-muted-foreground">
           <div className="flex items-center gap-2">
-            <span className="font-mono text-xl font-bold text-card-foreground">
+            <span className="font-mono font-bold text-card-foreground">
               100+
             </span>
             <span className="text-sm">veiculos</span>
           </div>
           <div className="h-5 w-px bg-border" />
           <div className="flex items-center gap-2">
-            <span className="font-mono text-xl font-bold text-card-foreground">
+            <span className="font-mono font-bold text-card-foreground">
               10+
             </span>
-            <span className="text-sm">lojas parceiras</span>
+            <span className="text-sm">lojas</span>
           </div>
           <div className="h-5 w-px bg-border" />
           <div className="flex items-center gap-2">
-            <span className="font-mono text-xl font-bold text-card-foreground">
+            <span className="font-mono font-bold text-card-foreground">
               7
             </span>
             <span className="text-sm">estados</span>

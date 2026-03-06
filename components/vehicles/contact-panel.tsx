@@ -44,7 +44,7 @@ export function ContactPanel({ vehicle }: ContactPanelProps) {
 
               <Link
                 target="_blank"
-                href={`https://web.whatsapp.com/send/?phone=5583982209260&text=${vehicle.message}`}
+                href={`https://wa.me/send/?phone=5583982209260&text=${vehicle.message}`}
               >
                 <Button
                   variant="outline"
@@ -58,7 +58,7 @@ export function ContactPanel({ vehicle }: ContactPanelProps) {
             ) :
               (<Link
                 target="_blank"
-                href={`https://web.whatsapp.com/send/?phone=5583982209260`}
+                href={`https://wa.me/send/?phone=5583982209260`}
               >
                 <Button
                   variant="outline"
