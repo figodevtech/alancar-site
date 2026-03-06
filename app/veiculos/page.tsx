@@ -4,9 +4,9 @@ import { Footer } from "@/components/footer"
 import { VehicleListContent } from "@/components/vehicles/vehicle-list-content"
 
 export const metadata = {
-  title: "Veiculos a Venda - AutoBrasil",
+  title: "Alan Car",
   description:
-    "Encontre carros novos e usados com os melhores precos. Filtre por marca, modelo, ano e muito mais.",
+    "Encontre carros com os melhores precos. Filtre por marca, modelo, ano e muito mais.",
 }
 
 export default function VeiculosPage() {

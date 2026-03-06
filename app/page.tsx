@@ -8,7 +8,7 @@ import { BodyTypeSection } from "@/components/home/body-type-section"
 
 export default function HomePage() {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col ">
       <Header />
       <main className="flex-1">
         <BannerCarousel />

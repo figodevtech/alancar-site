@@ -14,17 +14,24 @@ import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
 const bannerData = [
-//   {
-//     id: 1,
-//     image: "/images/banners/banner-1.jpg",
-//     alt: "Sedan em estrada costeira ao por do sol",
-//   },
   {
     id: 1,
-    image: "/images/banners/banner-2.jpg",
-    alt: "SUV compacto na cidade ao entardecer",
+    image: "/images/banners/qualidade&precojusto.png",
+    alt: "qualidade&precojusto",
   },
-  
+  {
+    id: 2,
+    image: "/images/banners/carrosdeleilao.png",
+    alt: "carrosdeleilao",
+  },
+  {
+    id: 3,
+    image: "/images/banners/diadamulher.png",
+    alt: "diadamulher",
+  },
+
+
+
 ]
 
 export function BannerCarousel() {

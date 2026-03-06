@@ -28,7 +28,7 @@ export function HeroSearch() {
   }
 
   return (
-    <section className="relative -mt-12 z-10 mx-auto max-w-6xl px-4 lg:px-6">
+    <section className="relative mt-5 z-10 mx-auto max-w-6xl px-4 lg:px-6">
       <div className="rounded-2xl bg-card p-5 shadow-xl ring-1 ring-border/50 md:p-6">
         <h2 className="mb-4 font-mono text-lg font-bold text-card-foreground">
           Encontre seu proximo veiculo
