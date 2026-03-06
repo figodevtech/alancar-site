@@ -39,24 +39,65 @@ export function BannerCarousel() {
   const [current, setCurrent] = React.useState(0)
   const [count, setCount] = React.useState(0)
 
+  // Initialize carousel count and selection listener
   React.useEffect(() => {
     if (!api) return
 
     setCount(api.scrollSnapList().length)
     setCurrent(api.selectedScrollSnap() + 1)
 
-    api.on("select", () => {
+    const onSelect = () => {
       setCurrent(api.selectedScrollSnap() + 1)
-    })
+    }
 
-    const intervalId = setInterval(() => {
-      api.scrollNext()
-    }, 6000)
+    api.on("select", onSelect)
 
     return () => {
-      clearInterval(intervalId)
+      api.off("select", onSelect)
     }
   }, [api])
+
+  // Timer logic: Resets on 'current' change (manual navigation) 
+  // and respects page visibility
+  React.useEffect(() => {
+    if (!api) return
+
+    let intervalId: NodeJS.Timeout | null = null
+
+    const startTimer = () => {
+      if (intervalId) clearInterval(intervalId)
+      intervalId = setInterval(() => {
+        api.scrollNext()
+      }, 6000)
+    }
+
+    const stopTimer = () => {
+      if (intervalId) {
+        clearInterval(intervalId)
+        intervalId = null
+      }
+    }
+
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        stopTimer()
+      } else {
+        startTimer()
+      }
+    }
+
+    // Only start if tab is visible
+    if (!document.hidden) {
+      startTimer()
+    }
+
+    document.addEventListener("visibilitychange", handleVisibilityChange)
+
+    return () => {
+      stopTimer()
+      document.removeEventListener("visibilitychange", handleVisibilityChange)
+    }
+  }, [api, current])
 
   return (
     <div className="w-full relative group">
