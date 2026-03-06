@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: VehicleDetailPageProps) {
   const vehicle = getVehicleById(id)
   if (!vehicle) return { title: "Veiculo nao encontrado" }
   return {
-    title: `${vehicle.brand} ${vehicle.model} ${vehicle.version} - AutoBrasil`,
+    title: `${vehicle.brand} ${vehicle.model} ${vehicle.version} - AlanCar`,
     description: vehicle.description,
   }
 }
@@ -80,8 +80,8 @@ export default async function VehicleDetailPage({
                   {vehicle.sellerType === "concessionaria"
                     ? "Concessionaria"
                     : vehicle.sellerType === "loja"
-                    ? "Loja"
-                    : "Particular"}
+                      ? "Loja"
+                      : "Particular"}
                 </Badge>
                 {vehicle.isNew && (
                   <Badge className="bg-accent text-accent-foreground">
@@ -99,7 +99,9 @@ export default async function VehicleDetailPage({
                 <span>
                   {vehicle.year}/{vehicle.yearModel}
                 </span>
-                <span>{formatMileage(vehicle.mileage)}</span>
+                {vehicle.mileage && (
+                  <span>{formatMileage(vehicle.mileage)}</span>
+                )}
                 <span>
                   {vehicle.city} - {vehicle.state}
                 </span>
@@ -135,15 +137,21 @@ export default async function VehicleDetailPage({
                         {formatPrice(vehicle.price)}
                       </p>
                       <div className="mt-4 flex flex-col gap-2">
-                        <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
+                        {/* <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
                           Ver telefone
-                        </Button>
-                        <Button
-                          variant="outline"
-                          className="w-full border-accent text-accent hover:bg-accent/10"
-                        >
-                          Enviar mensagem
-                        </Button>
+                        </Button> */}
+                        {vehicle.message && (
+                          <Link
+                            target="_blank"
+                            href={`https://web.whatsapp.com/send/?phone=5583982209260&text=${vehicle.message}`}>
+                            <Button
+                              variant="outline"
+                              className="w-full border-accent text-accent hover:bg-accent/10"
+                            >
+                              Enviar mensagem
+                            </Button>
+                          </Link>
+                        )}
                       </div>
                     </CardContent>
                   </Card>

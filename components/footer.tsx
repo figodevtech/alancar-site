@@ -8,8 +8,8 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div>
             <Link href="/" className="mb-4 flex items-center gap-2">
-              <Car className="h-6 w-6" />
-              <span className="font-mono text-lg font-bold">AutoBrasil</span>
+
+              <span className="font-mono text-lg font-bold">Alan Car</span>
             </Link>
             <p className="text-sm leading-relaxed text-primary-foreground/70">
               O maior marketplace de veiculos do Brasil. Encontre o carro dos
@@ -32,7 +32,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/veiculos"
+                  href=""
                   className="text-sm text-primary-foreground/70 transition-colors hover:text-primary-foreground"
                 >
                   Carros novos
@@ -40,7 +40,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/veiculos"
+                  href=""
                   className="text-sm text-primary-foreground/70 transition-colors hover:text-primary-foreground"
                 >
                   SUVs
@@ -48,7 +48,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/veiculos"
+                  href=""
                   className="text-sm text-primary-foreground/70 transition-colors hover:text-primary-foreground"
                 >
                   Picapes
@@ -64,7 +64,7 @@ export function Footer() {
             <ul className="flex flex-col gap-2">
               <li>
                 <Link
-                  href="/veiculos"
+                  href=""
                   className="text-sm text-primary-foreground/70 transition-colors hover:text-primary-foreground"
                 >
                   Financiamento
@@ -72,7 +72,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/veiculos"
+                  href=""
                   className="text-sm text-primary-foreground/70 transition-colors hover:text-primary-foreground"
                 >
                   Seguro auto
@@ -80,7 +80,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/veiculos"
+                  href=""
                   className="text-sm text-primary-foreground/70 transition-colors hover:text-primary-foreground"
                 >
                   Tabela FIPE
@@ -88,7 +88,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/veiculos"
+                  href=""
                   className="text-sm text-primary-foreground/70 transition-colors hover:text-primary-foreground"
                 >
                   Consulta veicular
@@ -104,7 +104,7 @@ export function Footer() {
             <ul className="flex flex-col gap-2">
               <li>
                 <Link
-                  href="/"
+                  href=""
                   className="text-sm text-primary-foreground/70 transition-colors hover:text-primary-foreground"
                 >
                   Sobre nos
@@ -112,7 +112,8 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/"
+                  target="_blank"
+                  href="https://web.whatsapp.com/send/?phone=5583982209260&text&type=phone_number&app_absent=0&utm_source=ig"
                   className="text-sm text-primary-foreground/70 transition-colors hover:text-primary-foreground"
                 >
                   Contato
@@ -120,7 +121,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/"
+                  href=""
                   className="text-sm text-primary-foreground/70 transition-colors hover:text-primary-foreground"
                 >
                   Termos de uso
@@ -128,7 +129,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/"
+                  href=""
                   className="text-sm text-primary-foreground/70 transition-colors hover:text-primary-foreground"
                 >
                   Politica de privacidade
@@ -140,8 +141,10 @@ export function Footer() {
 
         <div className="mt-10 border-t border-primary-foreground/10 pt-6">
           <p className="text-center text-xs text-primary-foreground/50">
-            2025 AutoBrasil. Todos os direitos reservados.
+            2026 Alan Car. Todos os direitos reservados.
           </p>
+          <p className="text-center text-xs text-primary-foreground/50">
+            Powered By FIGO</p>
         </div>
       </div>
     </footer>

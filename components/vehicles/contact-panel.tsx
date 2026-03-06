@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import type { Vehicle } from "@/lib/vehicles"
 import { formatPrice } from "@/lib/vehicles"
+import Link from "next/link"
 
 interface ContactPanelProps {
   vehicle: Vehicle
@@ -32,27 +33,48 @@ export function ContactPanel({ vehicle }: ContactPanelProps) {
           </div>
 
           <div className="mt-5 flex flex-col gap-2">
-            <Button
+            {/* <Button
               className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
               size="lg"
             >
               <Phone className="mr-2 h-4 w-4" />
               Ver telefone
-            </Button>
-            <Button
-              variant="outline"
-              className="w-full border-accent text-accent hover:bg-accent/10"
-              size="lg"
-            >
-              <MessageCircle className="mr-2 h-4 w-4" />
-              Enviar mensagem
-            </Button>
+            </Button> */}
+            {vehicle.message ? (
+
+              <Link
+                target="_blank"
+                href={`https://web.whatsapp.com/send/?phone=5583982209260&text=${vehicle.message}`}
+              >
+                <Button
+                  variant="outline"
+                  className="hover:text-accent hover:cursor-pointer w-full border-accent text-accent hover:bg-accent/10"
+                  size="lg"
+                >
+                  <MessageCircle className="mr-2 h-4 w-4" />
+                  Enviar mensagem
+                </Button>
+              </Link>
+            ) :
+              (<Link
+                target="_blank"
+                href={`https://web.whatsapp.com/send/?phone=5583982209260`}
+              >
+                <Button
+                  variant="outline"
+                  className="hover:text-accent hover:cursor-pointer w-full border-accent text-accent hover:bg-accent/10"
+                  size="lg"
+                >
+                  <MessageCircle className="mr-2 h-4 w-4" />
+                  Enviar mensagem
+                </Button>
+              </Link>)}
           </div>
 
           <div className="mt-4 flex items-center gap-2 rounded-lg bg-secondary p-3">
             <Shield className="h-5 w-5 shrink-0 text-primary" />
             <span className="text-xs text-muted-foreground">
-              Negociacao protegida pelo AutoBrasil. Compre com seguranca.
+              Negociacao protegida pelo Alan Car. Compre com seguranca.
             </span>
           </div>
         </CardContent>
@@ -69,8 +91,8 @@ export function ContactPanel({ vehicle }: ContactPanelProps) {
                 {vehicle.sellerType === "concessionaria"
                   ? "Concessionaria"
                   : vehicle.sellerType === "loja"
-                  ? "Loja"
-                  : "Particular"}
+                    ? "Loja"
+                    : "Particular"}
               </p>
             </div>
             <div className="flex items-center gap-1 text-accent">

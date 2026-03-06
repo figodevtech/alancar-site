@@ -67,7 +67,11 @@ export function Header() {
             className="font-semibold"
             asChild
           >
-            <Link href="/veiculos">Anunciar</Link>
+            <Link
+              target="_blank"
+              href="
+            https://web.whatsapp.com/send/?phone=5583982209260&text=Olá,%20gostaria%20de%20anunciar%20um%20veículo%20no%20seu%20site.%20
+            ">Anunciar</Link>
           </Button>
         </div>
 

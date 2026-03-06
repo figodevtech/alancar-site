@@ -26,7 +26,7 @@ export function VehicleSpecs({ vehicle }: VehicleSpecsProps) {
     {
       icon: Gauge,
       label: "Quilometragem",
-      value: formatMileage(vehicle.mileage),
+      value: vehicle.mileage ? formatMileage(vehicle.mileage) : "",
     },
     { icon: Fuel, label: "Combustivel", value: vehicle.fuel },
     { icon: Settings, label: "Cambio", value: vehicle.transmission },

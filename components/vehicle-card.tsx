@@ -13,7 +13,7 @@ interface VehicleCardProps {
 export function VehicleCard({ vehicle }: VehicleCardProps) {
   return (
     <Link href={`/veiculos/${vehicle.id}`}>
-      <Card className="group overflow-hidden border-border bg-card transition-all hover:shadow-lg">
+      <Card className="group overflow-hidden border-border bg-card transition-all hover:shadow-lg h-full">
         <div className="relative aspect-16/10 overflow-hidden">
           <Image
             src={vehicle.image}
@@ -35,8 +35,8 @@ export function VehicleCard({ vehicle }: VehicleCardProps) {
               {vehicle.sellerType === "concessionaria"
                 ? "Concessionaria"
                 : vehicle.sellerType === "loja"
-                ? "Loja"
-                : "Particular"}
+                  ? "Loja"
+                  : "Particular"}
             </Badge>
           </div>
         </div>
@@ -65,10 +65,12 @@ export function VehicleCard({ vehicle }: VehicleCardProps) {
                 {vehicle.year}/{vehicle.yearModel}
               </span>
             </div>
-            <div className="flex items-center gap-1.5 text-muted-foreground">
-              <Gauge className="h-3.5 w-3.5 shrink-0" />
-              <span className="text-xs">{formatMileage(vehicle.mileage)}</span>
-            </div>
+            {vehicle.mileage && (
+              <div className="flex items-center gap-1.5 text-muted-foreground">
+                <Gauge className="h-3.5 w-3.5 shrink-0" />
+                <span className="text-xs">{formatMileage(vehicle.mileage)}</span>
+              </div>
+            )}
             <div className="flex items-center gap-1.5 text-muted-foreground">
               <Fuel className="h-3.5 w-3.5 shrink-0" />
               <span className="text-xs">{vehicle.fuel}</span>

@@ -102,21 +102,21 @@ export function HeroSearch() {
         <div className="mt-5 flex flex-wrap items-center gap-6 border-t border-border pt-4 text-muted-foreground">
           <div className="flex items-center gap-2">
             <span className="font-mono text-xl font-bold text-card-foreground">
-              8.000+
+              100+
             </span>
             <span className="text-sm">veiculos</span>
           </div>
           <div className="h-5 w-px bg-border" />
           <div className="flex items-center gap-2">
             <span className="font-mono text-xl font-bold text-card-foreground">
-              500+
+              10+
             </span>
             <span className="text-sm">lojas parceiras</span>
           </div>
           <div className="h-5 w-px bg-border" />
           <div className="flex items-center gap-2">
             <span className="font-mono text-xl font-bold text-card-foreground">
-              27
+              7
             </span>
             <span className="text-sm">estados</span>
           </div>
