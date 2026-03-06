@@ -130,7 +130,7 @@ export const vehicles: Vehicle[] = [
     engineSize: "2.0",
     // horsepower: 177,
     isNew: false,
-    message: "Olá,%20me%20interessei%20pelo%Jeep%20Compass%20Longitude%20Diesel%202.0-%202019/2019"
+    message: "Olá,%20me%20interessei%20pelo%20Jeep%20Compass%20Longitude%20Diesel%202.0%20-%20202019/2019"
 
   },
   {
@@ -184,7 +184,7 @@ export const vehicles: Vehicle[] = [
     engineSize: "2.0",
     // horsepower: 177,
     isNew: false,
-    message: "Olá,%20me%20interessei%20pelo%Jeep%20Compass%20Longitude%20Diesel%202.0-%202022/2022"
+    message: "Olá,%20me%20interessei%20pelo%20Jeep%20Compass%20Longitude%20Diesel%202.0%20-%20202022/2022"
 
   },
   {
@@ -246,7 +246,7 @@ export const vehicles: Vehicle[] = [
     engineSize: "1.3 turbo",
     // horsepower: 177,
     isNew: false,
-    message: "Olá,%20me%20interessei%20pelo%Fiat%20Fastback%20Abarth%20ED%20Flex%201.3%20Turbo%20-%202025/2025"
+    message: "Olá,%20me%20interessei%20pelo%20Fiat%20Fastback%20Abarth%20ED%20Flex%201.3%20Turbo%20-%202025/2025"
 
   },
   {
@@ -310,7 +310,7 @@ export const vehicles: Vehicle[] = [
     engineSize: "1.0",
     // horsepower: 177,
     isNew: false,
-    message: "Olá,%20me%20interessei%20pelo%Volkswagen%20Nivus%20Highline%20TSI%20Flex%201.0%20Turbo%20Aut.%20-%202024/2024"
+    message: "Olá,%20me%20interessei%20pelo%20Volkswagen%20Nivus%20Highline%20TSI%20Flex%201.0%20Turbo%20Aut.%20-%202024/2024"
 
 
   },
